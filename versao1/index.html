@@ -41,8 +41,18 @@
       <h2 id="titulo-destinos">Destinos no Universo</h2>
       <p class="descricao-secao">Quatro mundos do Sistema Solar. Quatro motivos para olhar para o céu.</p>
 
+      <!-- DIV com o papel/finalidade de um grupo de botões -->
+       <!-- Usamos o aria-label para descrever/detalhar a finalidade desse grupo de botões  -->
+
+      <div class="filtros-destinos" role="group" aria-label="Filtrar destinos por categoria">
+        <button data-filtro="todos" type="button" class="filtro-ativo" aria-pressed="true">Todos</button>
+        <button data-filtro="satelite" type="button" aria-pressed="false">Satélite</button>
+        <button data-filtro="rochoso" type="button" aria-pressed="false">Rochoso</button>
+        <button data-filtro="gasoso" type="button" aria-pressed="false">Gasoso</button>
+      </div>
+
       <div class="grade-destinos">
-        <article class="card-destino">
+        <article class="card-destino" data-categoria="satelite">
           <img src="img/lua.webp" alt="Lua com áreas claras e escuras, em uma composição com a Terra ao fundo." width="760" height="570">
           <div class="card-conteudo">
             <p class="categoria">Satélite natural</p>
@@ -69,7 +79,7 @@
         </article>
         
 
-        <article class="card-destino" aria-pressed="false">
+        <article class="card-destino" data-categoria="rochoso">
           <img src="img/marte.jpg" alt="Marte visto do espaço, com superfície em tons avermelhados." width="506" height="480">
           <div class="card-conteudo">
             <p class="categoria">Planeta rochoso</p>
@@ -92,7 +102,7 @@
           </div>
         </article>
 
-        <article class="card-destino">
+        <article class="card-destino" data-categoria="gasoso">
           <img src="img/jupiter.jpg" alt="Júpiter com faixas de nuvens e uma grande tempestade oval." width="750" height="750">
           <div class="card-conteudo">
             <p class="categoria">Gigante gasoso</p>
@@ -115,7 +125,7 @@
           </div>
         </article>
 
-        <article class="card-destino">
+        <article class="card-destino" data-categoria="gasoso">
           <img src="img/saturno.jpg" alt="Saturno envolvido por seus amplos anéis, contra o fundo escuro do espaço." width="960" height="320">
           <div class="card-conteudo">
             <p class="categoria">Gigante gasoso</p>

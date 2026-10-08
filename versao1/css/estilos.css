@@ -191,6 +191,36 @@ a:focus-visible, button:focus-visible {
 .destinos {
   border-top: 1px solid var(--borda);
 }
+
+.filtros-destinos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.filtros-destinos button {
+  padding: 10px 16px;
+  min-height: 44px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filtros-destinos button:hover {
+  border-color: var(--destaque);
+}
+
+.filtros-destinos .filtro-ativo {
+  border-color: var(--destaque);
+  background: var(--destaque);
+  color: var(--fundo);
+}
+
 .grade-destinos {
   display: flex;
   flex-wrap: wrap;
